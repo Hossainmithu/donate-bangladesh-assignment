@@ -1,13 +1,17 @@
 
-// function getInputFieldValueById(id){
-//   const inputValue = document.getElementById(id).value;
-//   const inputValueNumber = parseFloat(inputValue);
-//   return inputValueNumber;
-// }
+function getInputFieldValueById(id){
+  const input = document.getElementById(id).value;
+  const inputNumber = parseFloat(input);
+
+  return inputNumber;
+
+}
 
 
 function getTextFieldValueById(id){
-  const textValue = document.getElementById(id).innerText;
-  const textValueNumber = parseFloat(textValue);
-  return textValueNumber;
+  const balance = document.getElementById(id).innerText;
+  const balanceNumber = parseFloat(balance);
+
+  return balanceNumber;
+
 }

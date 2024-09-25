@@ -1,19 +1,21 @@
-document.getElementById('donate-for-noakhali')
-  .addEventListener('click', function () {
 
-    const inputDonateForNoakhali = document.getElementById('input-donate-for-noakhali').value;
-    const inputDonateForNoakhaliNumber = parseFloat(inputDonateForNoakhali);
-    
-    const balanceForNoakhali = document.getElementById('balance-for-noakhali').innerText;
-    const balanceForNoakhaliNumber = parseFloat(balanceForNoakhali);
+document.getElementById('donate-now-noakhali')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
 
-    const myBalance = document.getElementById('my-balance').innerText;
-    const myBalanceNumber = parseFloat(myBalance);
-    
-    const finalBalanceForNoakhali = balanceForNoakhaliNumber + inputDonateForNoakhaliNumber;
-    const finalMyBalance = myBalanceNumber - inputDonateForNoakhaliNumber;
-    
-    document.getElementById('balance-for-noakhali').innerText = finalBalanceForNoakhali;
-    document.getElementById('my-balance').innerText = finalMyBalance;
+    const inputNoakhali = getInputFieldValueById('input-noakhali');
+    const myBalance = getTextFieldValueById('my-balance');
 
+    if(inputNoakhali > 0 && inputNoakhali <= myBalance){
+      const balanceNoakhali = getTextFieldValueById('balance-noakhali');
+
+      const newBalanceNoakhali = balanceNoakhali + inputNoakhali;
+      const newMyBalance = myBalance - inputNoakhali;
+
+      document.getElementById('balance-noakhali').innerText = newBalanceNoakhali;
+      document.getElementById('my-balance').innerText = newMyBalance;
+    }
+    else{
+      alert('Will not added your money');
+    }
   })
