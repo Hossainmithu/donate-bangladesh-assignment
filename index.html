@@ -44,15 +44,16 @@
     <!-- banner section start -->
     <section>
       <div class="mt-10 mb-5 flex justify-center items-center gap-4">
-        <button class="btn bg-[#B4F461] border">Donation</button>
-        <button class="btn btn-outline">History</button>
+        <button id="btn-donation" class="btn bg-[#B4F461] border">Donation</button>
+        <button id="btn-history" class="btn btn-outline">History</button>
       </div>
     </section>
     <!-- banner section end -->
     <div class="divider"></div>
   </header>
   <main>
-    <section class="w-[85%] m-auto">
+    <!-- donation section start -->
+    <section id="donation-section" class=" w-[85%] m-auto">
       <!-- donation div 1 start -->
       <div class="border-dotted border-2 border-b-neutral-700 p-10 rounded-lg">
         <div class=" flex gap-10 flex-col lg:flex-row">
@@ -126,11 +127,35 @@
       </div>
       <!-- donation div 3 end -->
     </section>
+    <!-- donation section end -->
+    <!-- history section start -->
+    <section id="history-section" class="flex justify-center items-center">
+      <div class="card bg-base-100 w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">
+            Shoes!
+            <div class="badge badge-secondary">NEW</div>
+          </h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div class="card-actions justify-end">
+            <div class="badge badge-outline">Fashion</div>
+            <div class="badge badge-outline">Products</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- history section end -->
   </main>
   <script src="js/utilities.js"></script>
   <script src="js/noakhali.js"></script>
   <script src="js/feni.js"></script>
   <script src="js/quota.js"></script>
+  <script src="js/features.js"></script>
 </body>
 
 </html>
